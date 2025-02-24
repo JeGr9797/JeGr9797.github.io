@@ -3,10 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Personal</title>
+    <title>José Emmanuel Gómez-Rocha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #444;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenido a mi página personal</h1>
-    <p>Esta es mi página de GitHub Pages.</p>
+
+    <header>
+        <h1>José Emmanuel Gómez-Rocha</h1>
+        <p>Entusiasta de la programación matemática</p>
+    </header>
+
+    <nav>
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="about">
+            <h2>Sobre mí...</h2>
+            <p>Hola, stalker. Soy Emmanuel, estudiante de doctorado en el Tecnológico de Monterrey. Mis intereses se centran en la investigación de operaciones, especialmente en programación matemática y, en menor medida, en heurísticas. Recientemente me he adentrado en el aprendizaje automático, aunque mi verdadera pasión sigue siendo el modelado matemático.
+
+En esta página encontrarás principalmente contenido académico, reflexiones sobre mi trayectoria y detalles de mis proyectos. Sin embargo, de vez en cuando también comparto otros temas no tan académicos. ¡Explora y descubre! </p>
+        </section>
+
+        <section id="projects">
+            <h2>Proyectos</h2>
+            <ul>
+                <li><strong>Heuristics and exact methods for a class of capacity investment problems:</strong> El tema de mi tesis doctoral.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contacto</h2>
+            <p>Puedes contactarme a través de:</p>
+            <ul>
+                <li><a href="mailto:emmanuel.gr@tec.mx">Correo electrónico</a></li>
+                <li><a href="https://github.com/JeGr9797" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/jos%C3%A9-emmanuel-g%C3%B3mez-rocha-6b83551ab/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2024 José Emmanuel Gómez-Rocha | Página Personal</p>
+    </footer>
+
 </body>
 </html>
