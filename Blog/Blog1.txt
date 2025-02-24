@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post 1 - Mi Blog</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Blog</h1>
+        <nav>
+            <a href="../index.html">Inicio</a>
+        </nav>
+    </header>
+    <article>
+        <h2>Título del post</h2>
+        <p>Contenido del post...</p>
+    </article>
+</body>
+</html>
