@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programar cursos... ¿con modelos matemáticos? - José Emmanuel Gómez-Rocha</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            padding: 10px;
+            background: #444;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        article {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+        pre {
+            background-color: #f9f9f9;
+            padding: 10px;
+            overflow-x: auto;
+            border-left: 5px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Blog Personal</h1>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="../blog.html">Blog</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+    <article>
+        <h2>Programar cursos... ¿con modelos matemáticos?</h2>
+        <p>Una de las actividades que más disfruto en el Tec (y que más dolores de cabeza puede causar) es la programación de cursos. ¿Qué profesor dará qué clase, en qué semana, qué días y a qué horas? ¿Cómo evitar empalmes, asegurar continuidad y cuidar la carga de los docentes?</p>
+
+        <p>En mi caso, decidí atacar el problema con un modelo de optimización. ¿Por qué? Porque la programación manual de horarios es un dolor para cualquiera que lo haya vivido. Y porque, como matemático aplicado, no podía dejar pasar la oportunidad.</p>
+
+        <h3>La idea</h3>
+        <p>El objetivo era claro: asignar clases a docentes cuidando criterios de continuidad, carga semanal, y evitando asignaciones consecutivas en días distintos. El resultado fue un modelo de programación entera que integra binarios por hora, semana y profesor.</p>
+
+        <h3>¿Cómo luce este modelo?</h3>
+        <p>La notación que utilicé es la siguiente:</p>
+
+        <pre>
+Sea:
+- P: conjunto de profesores
+- S: conjunto de semanas
+- D: conjunto de días (ej. lunes a viernes)
+- H: conjunto de horas por día
+        </pre>
+
+        <p>Y la variable binaria:</p>
+
+        <pre>
+x[d,h,s,p] = 1 si el profesor p da clase el día d, hora h, semana s; 0 en otro caso.
+        </pre>
+
+        <p>Una de las restricciones clave fue garantizar que un profesor diera al menos un bloque de 2 horas continuas por día:</p>
+
+        <pre>
+Para cada profesor p y día d:
+sum_{s,h} x[d,h,s,p] >= 2 ⇒ asegurar clases continuas
+        </pre>
+
+        <p>Además, evité que un profesor tuviera clases en bloques partidos durante el día, y cuidé que no dieran clases más de 3 horas seguidas. También incorporé restricciones para evitar empalmes entre asignaturas del mismo semestre.</p>
+
+        <h3>¿Y la implementación?</h3>
+        <p>Utilicé Gurobi con Python para modelar el problema. Luego cargué la solución a un DataFrame y la visualicé semana por semana. El resultado fue mucho más eficiente y justo para los docentes.</p>
+
+        <p>Una muestra de la formulación en LaTeX que usé (para reportes) fue:</p>
+
+        <pre>
+\[
+\begin{aligned}
+\text{Minimizar } & \sum_{p \in P} \sum_{s \in S} \sum_{d \in D} \sum_{h \in H} x_{dhs}^p \cdot c_{dhs}^p \\
+\text{Sujeto a:} \\
+& \sum_{h \in H} x_{dhs}^p \geq 2 & \forall p \in P, d \in D, s \in S \\
+& \sum_{h \in H} x_{dhs}^p \leq 3 & \text{(máx. 3 horas por bloque)} \\
+& x_{dhs}^p \in \{0,1\} & \forall d,h,s,p
+\end{aligned}
+\]
+        </pre>
+
+        <p>Esto permitió visualizar fácilmente las asignaciones y hacer ajustes cuando fue necesario. Y sobre todo, ahorró tiempo, discusión y mucho estrés.</p>
+
+        <p>¿Tú también enfrentas la programación académica? Escríbeme y con gusto compartimos ideas.</p>
+
+        <p>En una futura entrada hablaré sobre cómo visualicé el horario en HTML directamente desde Python.</p>
+    </article>
+</div>
+
+<img src="3.jpg" alt="Visualización horaria Tec" width="50%" style="display: block; margin: auto;">
+
+<footer>
+    <p>© 2025 José Emmanuel Gómez-Rocha | Blog</p>
+</footer>
+</body>
+</html>
 
