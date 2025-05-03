@@ -82,16 +82,27 @@
     
     <div class="container">
     <article>
-        <h2>Programar cursos... ¿con modelos matemáticos?</h2>
-        <p>Una de las actividades que más disfruto en el Tec (y que más dolores de cabeza puede causar) es la programación de cursos. ¿Qué profesor dará qué clase, en qué semana, qué días y a qué horas? ¿Cómo evitar empalmes, asegurar continuidad y cuidar la carga de los docentes?</p>
+        <h2>Programar cursos... ¿con modelos matemáticos de optimización?</h2>
 
-        <p>En mi caso, decidí atacar el problema con un modelo de optimización. ¿Por qué? Porque la programación manual de horarios es un dolor para cualquiera que lo haya vivido. Y porque, como matemático aplicado, no podía dejar pasar la oportunidad.</p>
+        <p>¿Qué profesor dará qué clase, en qué semana, qué días y a qué horas? ¿Cómo evitar empalmes, asegurar continuidad y cuidar la carga de los docentes?
+        Estas preguntas son comunes en los problemas de asignación de horarios, particularmente en los conocidos como <em>course-based timetabling</em>. 
+        Estos problemas, más que de optimización, son de factibilidad. Mucha gente quizás no lo sabe, pero participé en un proyecto a nivel nacional dentro del Tecnológico de Monterrey, donde formulamos problemas de optimización combinatoria para una institución con más de 100,000 estudiantes. Imaginarás el nivel de estrés que tuve a mis 25 o 26 años. Sin embargo, me da gusto saber que, aunque muchas de mis ideas no se implementaron directamente, hoy en día varias reglas de programación provienen de propuestas que yo planteé.</p>
+        
+        <p>Con esa experiencia, y ahora coordinando un bloque, decidí reutilizar y adaptar el modelo de optimización que desarrollé para la microprogramación. 
+        Este modelo, en particular, me gusta porque busca que los profesores asistan el menor número posible de días por semana, aunque claramente también se podrían perseguir otras métricas de desempeño.</p>
+        
+        <h3>El modelo en cuestión...</h3>
+        
+        <p>El modelo se describe a continuación. Considera conjuntos de días, semanas, horas y profesores. La decisión principal consiste en asignar a un profesor a una hora específica en un día y semana dados. Además, el modelo incluye dos variables auxiliares: una binaria que detecta si el profesor asiste ese día en particular, y otra que contabiliza cuántos días por semana trabaja cada profesor.</p>
+        
+        <p>La función objetivo busca minimizar la cantidad total de días que asisten los profesores. Las restricciones garantizan que cada hora de cada día y semana esté cubierta por un profesor. Se controlan también la cantidad máxima de horas por día, la continuidad de las horas asignadas y el cumplimiento de la carga horaria total de cada profesor.</p>
+        
+        <p>Una de las ventajas de utilizar modelos de programación matemática es la flexibilidad para incorporar restricciones: todo se puede modelar como un problema MIP (programación entera mixta), incluso la lógica compleja.</p>
+        
+        <p>En este ejemplo, incluyo dos condiciones particulares: la primera impide que el profesor 3 imparta clases durante las primeras dos horas del día; la segunda obliga al profesor 1 a cubrir toda la carga del curso en el primer día (por ejemplo, lunes). Otras restricciones sirven para modelar el concepto de "días por semana" en los que un profesor asiste a dar clases.</p>
+        
+        <p>El modelo se presenta a continuación.</p>
 
-        <h3>La idea</h3>
-        <p>El objetivo era claro: asignar clases a docentes cuidando criterios de continuidad, carga semanal, y evitando asignaciones consecutivas en días distintos. El resultado fue un modelo de programación entera que integra binarios por hora, semana y profesor.</p>
-
-        <h3>¿Cómo luce este modelo?</h3>
-        <p>La notación que utilicé es la siguiente:</p>
 
         <div style="background:#fff; border-left: 5px solid #007acc; padding: 20px; margin: 30px 0; border-radius: 8px; font-family: Georgia, serif; font-size: 18px;">
     <p><strong>Notación:</strong></p>
@@ -140,8 +151,8 @@
     <p><strong>Condiciones particulares:</strong></p>
     \[
     \begin{aligned}
-    X_{dh3} &= 0 &\quad \forall d \in D, s \in S, h \in \{1,2\} \\
-    \sum_{h \in H} X_{dh2} &= |H| &\quad \forall s \in S
+    X_{dhs3} &= 0 &\quad \forall d \in D, s \in S, h \in \{1,2\} \\
+    \sum_{h \in H} X_{1hs2} &= |H| &\quad \forall s \in S
     \end{aligned}
     \]
 </div>
