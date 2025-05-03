@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programar cursos... ¿con modelos matemáticos? - José Emmanuel Gómez-Rocha</title>
@@ -89,55 +93,58 @@
         <h3>¿Cómo luce este modelo?</h3>
         <p>La notación que utilicé es la siguiente:</p>
 
-        <pre>
-Sea:
-- P: conjunto de profesores
-- S: conjunto de semanas
-- D: conjunto de días (ej. lunes a viernes)
-- H: conjunto de horas por día
-        </pre>
+        <div style="background:#fff; border-left: 5px solid #007acc; padding: 20px; margin: 30px 0; border-radius: 8px; font-family: Georgia, serif; font-size: 18px;">
+    <p><strong>Notación:</strong></p>
+    \[
+    \begin{array}{ll}
+    \textbf{Conjuntos:} & \\
+    D & \text{: Días} \\
+    H & \text{: Horas en un día} \\
+    S & \text{: Semanas} \\
+    P & \text{: Profesores} \\
+    \\
+    \textbf{Parámetros:} & \\
+    T_p & \text{: Carga total en horas que debe cumplir el profesor } p \in P \\
+    \\
+    \textbf{Variables de decisión:} & \\
+    X_{dhsp} \in \{0,1\} & \text{: 1 si el profesor } p \text{ da clase el día } d, \text{ hora } h, \text{ semana } s \\
+    Y_{dsp} \in \{0,1\} & \text{: 1 si el profesor } p \text{ asiste el día } d, \text{ semana } s \\
+    W_{ps} \geq 0 & \text{: número de días trabajados por el profesor } p \text{ en la semana } s
+    \end{array}
+    \]
 
-        <p>Y la variable binaria:</p>
+    <p><strong>Función objetivo:</strong></p>
+    \[
+    \min \sum_{p \in P} \sum_{s \in S} W_{ps}
+    \]
 
-        <pre>
-x[d,h,s,p] = 1 si el profesor p da clase el día d, hora h, semana s; 0 en otro caso.
-        </pre>
+    <p><strong>Restricciones:</strong></p>
+    \[
+    \begin{aligned}
+    \sum_{p \in P} X_{dhsp} &= 1 &\quad \forall d \in D, h \in H, s \in S \\
+    \sum_{h \in H} X_{dhsp} &\leq |H| Y_{dsp} &\quad \forall d \in D, s \in S, p \in P \\
+    \sum_{d \in D} Y_{dsp} &\leq W_{ps} &\quad \forall p \in P, s \in S \\
+    \end{aligned}
+    \]
 
-        <p>Una de las restricciones clave fue garantizar que un profesor diera al menos un bloque de 2 horas continuas por día:</p>
+    <p><strong>Restricción de continuidad de clases:</strong></p>
+    \[
+    X_{d(h-1)sp} + X_{d(h+1)sp} - X_{dhsp} \leq 1 \quad \forall d, s, p, h \in \{1, \dots, |H|-1\}
+    \]
 
-        <pre>
-Para cada profesor p y día d:
-sum_{s,h} x[d,h,s,p] >= 2 ⇒ asegurar clases continuas
-        </pre>
+    <p><strong>Carga horaria total por profesor:</strong></p>
+    \[
+    \sum_{d \in D} \sum_{h \in H} \sum_{s \in S} X_{dhsp} = T_p \quad \forall p \in P
+    \]
 
-        <p>Además, evité que un profesor tuviera clases en bloques partidos durante el día, y cuidé que no dieran clases más de 3 horas seguidas. También incorporé restricciones para evitar empalmes entre asignaturas del mismo semestre.</p>
-
-        <h3>¿Y la implementación?</h3>
-        <p>Utilicé Gurobi con Python para modelar el problema. Luego cargué la solución a un DataFrame y la visualicé semana por semana. El resultado fue mucho más eficiente y justo para los docentes.</p>
-
-        <p>Una muestra de la formulación en LaTeX que usé (para reportes) fue:</p>
-
-        <pre>
-\[
-\begin{aligned}
-\text{Minimizar } & \sum_{p \in P} \sum_{s \in S} \sum_{d \in D} \sum_{h \in H} x_{dhs}^p \cdot c_{dhs}^p \\
-\text{Sujeto a:} \\
-& \sum_{h \in H} x_{dhs}^p \geq 2 & \forall p \in P, d \in D, s \in S \\
-& \sum_{h \in H} x_{dhs}^p \leq 3 & \text{(máx. 3 horas por bloque)} \\
-& x_{dhs}^p \in \{0,1\} & \forall d,h,s,p
-\end{aligned}
-\]
-        </pre>
-
-        <p>Esto permitió visualizar fácilmente las asignaciones y hacer ajustes cuando fue necesario. Y sobre todo, ahorró tiempo, discusión y mucho estrés.</p>
-
-        <p>¿Tú también enfrentas la programación académica? Escríbeme y con gusto compartimos ideas.</p>
-
-        <p>En una futura entrada hablaré sobre cómo visualicé el horario en HTML directamente desde Python.</p>
-    </article>
+    <p><strong>Condiciones particulares:</strong></p>
+    \[
+    \begin{aligned}
+    X_{dh3} &= 0 &\quad \forall d \in D, s \in S, h \in \{1,2\} \\
+    \sum_{h \in H} X_{dh2} &= |H| &\quad \forall s \in S
+    \end{aligned}
+    \]
 </div>
-
-<img src="3.jpg" alt="Visualización horaria Tec" width="50%" style="display: block; margin: auto;">
 
 <footer>
     <p>© 2025 José Emmanuel Gómez-Rocha | Blog</p>
