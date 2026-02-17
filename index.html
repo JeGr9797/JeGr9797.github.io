@@ -1,239 +1,309 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>José Emmanuel Gómez-Rocha</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background: #444;
-            text-align: center;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-size: 18px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-        }
-        section {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>José Emmanuel Gómez-Rocha | Portfolio</title>
+  <meta name="description" content="PhD student @ Tecnológico de Monterrey. Operations Research, Mathematical Optimization, Gurobi, ML interpretability." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top">JEGR</a>
 
-    <header>
-        <h1>José Emmanuel Gómez-Rocha</h1>
-        <p>En busca de la factibilidad</p>
-    </header>
-
-    <nav>
+      <nav class="nav">
         <a href="#about">Sobre mí</a>
-        <a href="#facts">Fun facts acerca de mí</a>
         <a href="#projects">Proyectos</a>
         <a href="#research">Research</a>
-        <a href="#news">Noticias sobre mi</a>
-        <a href="blog.html">Blog</a> <!-- Enlace agregado -->
-        <a href="#Ranking">Ranking de coautores</a>
+        <a href="#news">Noticias</a>
+        <a href="#ranking">Ranking</a>
         <a href="#contact">Contacto</a>
-        <a href="club.html">El Club de los Innovadores y Disruptivos</a>
-    </nav>
-
-    <div class="container">
-
-        <section id="about">
-            <h2>Sobre mí...</h2>
-            <img src="JEGR_pic.jpg" alt="José Emmanuel Gómez-Rocha" style="width: 200px; display: block; margin: 10px auto; box-shadow: 3px 3px 10px rgba(0,0,0,0.2);">
-            <p>Hola, stalker. Soy Emmanuel, estudiante de doctorado en el Tecnológico de Monterrey. Mis intereses se centran en la investigación de operaciones, especialmente en programación matemática y, en menor medida, en heurísticas.
-
-He ganado en dos ocasiones el premio a mejor tesis de investigación de operaciones en México, en licenciatura y en maestría. Recientemente me he adentrado en el aprendizaje de máquina, aunque mi verdadera pasión sigue siendo el modelado matemático.
-
-Me gusta la academia, pero igual he resuelto problemas reales en diversas industrias, desde energía, asignación de cursos en una de las universidades más grandes de México hasta en temas de política. En esta página encontrarás principalmente contenido académico, reflexiones y detalles de mis proyectos. Sin embargo, de vez en cuando también comparto otros temas no tan académicos. ¡Explora y descubre! </p>
-        </section>
-
-
-        <section id="facts">
-            <h2>Fun facts acerca de mí</h2>
-            <ul>
-                <li>
-                    <strong> Mi canción favorita es:</strong> 
-                    <a href="https://www.youtube.com/watch?v=6c9ZlkEzc6M" target="_blank">[Espoir]</a>
-                </li>
-                <li>
-                    <strong> Si yo fuera canción sería:</strong> 
-                    <a href="https://www.youtube.com/watch?v=9vcZ9YMa5NI" target="_blank">[On & On (Effortless)]</a>
-                </li>
-                <li>
-                    <strong> Mi ciudad favorita es:</strong> Ciudad de México y Copenhague.
-                </li>
-                <li>
-                    <strong> Mi comida favorita es:</strong> Pizza.
-                </li>
-                <li>
-                    <strong> Mi bebida favorita es:</strong> Cerveza stout.
-                </li>
-                <li>
-                    <strong> Mi libro favorito es:</strong> El viejo y el mar.
-                </li>
-            </ul>
-        </section>
-
-
-        <section id="projects">
-            <h2> Proyectos</h2>
-            <ul>
-                <li>
-                    <strong> Heuristics and exact methods for a class of sequential decision problems:</strong>  
-                    El tema de mi tesis doctoral, supervisada por  
-                    <a href="https://scholar.google.com/citations?user=IeerooZ_6A0C&hl=es" target="_blank">José-Fernando Camacho-Vallejo</a>.
-                </li>
-                <li>
-                    <strong> Bravos Energía:</strong>  
-                    Large scale optimization for ERCOT power grid.  
-                    <a href="https://bravosenergia.com/" target="_blank">Ver más</a>.
-                </li>
-                <li>
-                    <strong> Ariza de México:</strong>  
-                    Workforce planning and Interpretable Machine Learning.  
-                    <a href="https://ariza.com.mx/" target="_blank">Ver más</a>.
-                </li>
-            </ul>
-        </section>
-
-
-        <section id="research">
-            <h2>Research</h2>
-            <p>Aquí están algunos de mis trabajos de investigación en mi doctorado.</p>
-            
-            <h3>Journal Papers</h3>
-            <ul>
-                <li>
-                    <strong>Towards a trade-off of interpretability, accuracy and scalability: Enhanced formulations in linear classification models.</strong> <br>
-                    <em>Computers and Operations Research, in Press.</em> <br>
-                     G.-de-Alba, H., & Téllez, A. & Gómez-Rocha, J. E. & Santos, C. & Orozco, J.A., & Baeza-Yates, R. (2026). <br>
-                    📄 <a href="https://www.sciencedirect.com/science/article/pii/S0305054826000298" target="_blank">[Enlace al artículo]</a>
-                </li>
-                <li>
-                    <strong>The latency location routing problem with split deliveries: mathematical formulation and metaheuristic algorithm.</strong> <br>
-                    <em>International Transactions in Operational Research, 33(3), 1609-1635.</em> <br>
-                    Nucamendi‐Guillén, S., Gómez‐Rocha, J. E., Camacho‐Vallejo, J. F., Pardo, J. A. M., & González‐Ramírez, R. G. (2026). <br>
-                    📄 <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.13606" target="_blank">[Enlace al artículo]</a>
-                </li>
-                <li>
-                    <strong>Solving the Semivectorial Bilevel Hazmat Network Design Problem by a Deconstructive Heuristic Algorithm.</strong> <br>
-                    <em>International Conference on Optimization and Learning (pp. 304-315).</em> <br>
-                    Camacho-Vallejo, J. F., & Gómez-Rocha, J. E. (2025). <br>
-                    📄 <a href="https://link.springer.com/chapter/10.1007/978-3-032-13589-6_23" target="_blank">[Enlace al artículo]</a>
-                </li>
-                <li>
-                    <strong>An enhanced Benders decomposition method and a matheuristic algorithm for solving the stochastic capacitated facility location problem with shortages.</strong> <br>
-                    <em>Expert Systems with Applications, 255, 124802.</em> <br>
-                    Gómez-Rocha, J. E., Hernández-Gress, E. S., Camacho-Vallejo, J. F., & Santos, C. (2024). <br>
-                    📄 <a href="https://www.sciencedirect.com/science/article/pii/S0957417424016695" target="_blank">[Enlace al artículo]</a>
-                </li>
-        
-                <li>
-                    <strong>Improving aggregate production planning considering maximum inventory area and service level with demand uncertainty: a nearshoring context in Mexican companies.</strong> <br>
-                    <em>Journal of Industrial and Production Engineering, 41(5), 442-455.</em> <br>
-                    Gómez-Rocha, J. E., Hernández-Gress, E. S., & Santos-Borbolla, C. A. (2024). <br>
-                    📄 <a href="https://www.tandfonline.com/doi/abs/10.1080/21681015.2024.2332632" target="_blank">[Enlace al artículo]</a>
-                </li>
-        
-            </ul>
-        </section>
-
-
-
-        <section id="news">
-    <h2> Noticias sobre mí</h2>
-            <p>Aquí puedes encontrar algunas noticias y reconocimientos sobre mi trabajo.</p>
-        
-            <ul>
-                <li>
-                     <strong>Premio a la mejor tesis OR México (Maestría)</strong> <br>
-                    <em>Conecta Tec</em> <br>
-                    📄 <a href="https://conecta.tec.mx/es/noticias/hidalgo/institucion/logro-nacional-profesor-del-tec-hidalgo-gana-premio-la-mejor-tesis" target="_blank">[Leer noticia]</a>
-                </li>
-        
-                <li>
-                     <strong>Lindo reconoce mi premio de mejor tesis OR México (licenciatura)</strong> <br>
-                    <em>Software especializado en modelos de optimización</em> <br>
-                     <a href="https://www.lindo.com/" target="_blank">[Visitar sitio web]</a>
-                </li>
-        
-                <li>
-                     <strong>Premio a la mejor tesis OR México (licenciatura)</strong> <br>
-                    <em>Semblanza en la Universidad Autónoma del Estado de Hidalgo</em> <br>
-                     <a href="https://www.uaeh.edu.mx/historias_exito/semblanza.php?id=132" target="_blank">[Leer noticia]</a>
-                </li>
-        
-            </ul>
-        </section>
-
-        <section id="Ranking">
-            <h2>🌍 Ranking de coautores/colaboradores</h2>
-            <p>Siempre he considero un priviliegio trabajar con personas, en otras ocasiones, no tanto... aquí esta el ranking con mis coautores favoritos.
-                Si te encuentras aquí, eres una persona con la que definitivamente me gustaría trabajar en muchos proyectos!.</p>
-            <ul>
-                <li><p>  José-Fernando Camacho-Vallejo - Tecnológico de Monterrey </p> </li>
-                <li><p>  Justo Puerto - Universidad de Sevilla  </p> </li>
-                <li><p>  Elena Fernández - Universidad de Cadiz </p> </li>
-                <li><p>  Eva Selene Hernández-Gress - Tecnológico de Monterrey  </p> </li>
-                <li><p>  Diego Ruiz-Hernandez -  Sheffield University Management School </p> </li> 
-                <li><p>  Eduardo Salazar-Treviño - AMPL </p> </li>
-                
-        </section>
-
-
-        <section id="contact">
-            <h2> 📩📧Contacto</h2>
-            <p>Puedes contactarme para temas de investigación o consultoría a través de:</p>
-            <ul>
-                <li><a href="mailto:emmanuel.gr@tec.mx">Correo electrónico</a></li>
-                <li><a href="https://github.com/JeGr9797" target="_blank">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/jos%C3%A9-emmanuel-g%C3%B3mez-rocha-6b83551ab/" target="_blank">LinkedIn</a></li>
-            </ul>
-        </section>
-
+        <a class="nav__pill" href="blog.html">Blog</a>
+        <a class="nav__pill" href="club.html">El Club</a>
+      </nav>
     </div>
+  </header>
 
-    <footer>
-        <p>© 2025 José Emmanuel Gómez-Rocha | Página Personal</p>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="kicker">En busca de la factibilidad</p>
+          <h1>José Emmanuel Gómez-Rocha</h1>
+          <p class="lead">
+            Estudiante de doctorado en el Tecnológico de Monterrey. Me enfoco en Investigación de Operaciones,
+            programación matemática y (a veces) heurísticas e interpretable ML.
+          </p>
+
+          <div class="cta">
+            <a class="btn btn--primary" href="#projects">Ver proyectos</a>
+            <a class="btn btn--ghost" href="#contact">Contactar</a>
+          </div>
+
+          <div class="badges">
+            <span class="badge">Optimization</span>
+            <span class="badge">Gurobi</span>
+            <span class="badge">Benders</span>
+            <span class="badge">Heuristics</span>
+            <span class="badge">Interpretable ML</span>
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <img class="avatar" src="assets/images/JEGR_pic.jpg" alt="José Emmanuel Gómez-Rocha" />
+          <div class="hero__links">
+            <a href="mailto:emmanuel.gr@tec.mx">emmanuel.gr@tec.mx</a>
+            <a href="https://github.com/JeGr9797" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/jos%C3%A9-emmanuel-g%C3%B3mez-rocha-6b83551ab/" target="_blank" rel="noopener">LinkedIn</a>
+            <!-- Si subes tu CV: assets/docs/CV.pdf -->
+            <!-- <a class="btn btn--small" href="assets/docs/CV.pdf" target="_blank" rel="noopener">Descargar CV</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Sobre mí</h2>
+          <p class="muted">Un poco de contexto (y sí, también un poco de humor).</p>
+        </div>
+
+        <div class="card">
+          <p>
+            Hola, stalker. Soy Emmanuel, estudiante de doctorado en el Tecnológico de Monterrey. Mis intereses se centran
+            en la investigación de operaciones, especialmente en programación matemática y, en menor medida, en heurísticas.
+          </p>
+          <p>
+            He ganado en dos ocasiones el premio a mejor tesis de investigación de operaciones en México (licenciatura y maestría).
+            Recientemente me he adentrado en el aprendizaje de máquina, aunque mi verdadera pasión sigue siendo el modelado matemático.
+          </p>
+          <p>
+            Me gusta la academia, pero también he resuelto problemas reales en diversas industrias, desde energía, asignación de cursos
+            en una de las universidades más grandes de México, hasta temas de política.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUN FACTS -->
+    <section id="facts" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Fun facts</h2>
+          <p class="muted">Porque la vida no es puro MIPGap.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Música</h3>
+            <ul class="list">
+              <li><strong>Mi canción favorita:</strong> <a href="https://www.youtube.com/watch?v=6c9ZlkEzc6M" target="_blank" rel="noopener">Espoir</a></li>
+              <li><strong>Si yo fuera canción:</strong> <a href="https://www.youtube.com/watch?v=9vcZ9YMa5NI" target="_blank" rel="noopener">On & On (Effortless)</a></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Random</h3>
+            <ul class="list">
+              <li><strong>Ciudad favorita:</strong> CDMX y Copenhague</li>
+              <li><strong>Comida favorita:</strong> Pizza</li>
+              <li><strong>Bebida favorita:</strong> Cerveza stout</li>
+              <li><strong>Libro favorito:</strong> El viejo y el mar</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Proyectos</h2>
+          <p class="muted">Selección corta de lo que traigo entre manos.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card card--project">
+            <h3>Heuristics & exact methods</h3>
+            <p>Tema de mi tesis doctoral (sequential decision problems).</p>
+            <div class="tags">
+              <span class="tag">OR</span><span class="tag">MIP</span><span class="tag">Heuristics</span>
+            </div>
+            <a class="card__link" href="https://scholar.google.com/citations?user=IeerooZ_6A0C&hl=es" target="_blank" rel="noopener">
+              Supervisor: José-Fernando Camacho-Vallejo →
+            </a>
+          </article>
+
+          <article class="card card--project">
+            <h3>Bravos Energía</h3>
+            <p>Large scale optimization for ERCOT power grid.</p>
+            <div class="tags">
+              <span class="tag">Energy</span><span class="tag">Optimization</span><span class="tag">Scale</span>
+            </div>
+            <a class="card__link" href="https://bravosenergia.com/" target="_blank" rel="noopener">Ver más →</a>
+          </article>
+
+          <article class="card card--project">
+            <h3>Ariza de México</h3>
+            <p>Workforce planning + Interpretable Machine Learning.</p>
+            <div class="tags">
+              <span class="tag">Workforce</span><span class="tag">Interpretable ML</span><span class="tag">Gurobi</span>
+            </div>
+            <a class="card__link" href="https://ariza.com.mx/" target="_blank" rel="noopener">Ver más →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Research</h2>
+          <p class="muted">Algunos trabajos (journal/conference).</p>
+        </div>
+
+        <div class="card">
+          <h3>Journal / Conference papers</h3>
+          <div class="pubs">
+            <div class="pub">
+              <div class="pub__title">Towards a trade-off of interpretability, accuracy and scalability: Enhanced formulations in linear classification models.</div>
+              <div class="pub__meta"><em>Computers & Operations Research, in Press</em> — (2026)</div>
+              <a class="pub__link" href="https://www.sciencedirect.com/science/article/pii/S0305054826000298" target="_blank" rel="noopener">Enlace →</a>
+            </div>
+
+            <div class="pub">
+              <div class="pub__title">The latency location routing problem with split deliveries: mathematical formulation and metaheuristic algorithm.</div>
+              <div class="pub__meta"><em>International Transactions in Operational Research</em> — (2026)</div>
+              <a class="pub__link" href="https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.13606" target="_blank" rel="noopener">Enlace →</a>
+            </div>
+
+            <div class="pub">
+              <div class="pub__title">Solving the Semivectorial Bilevel Hazmat Network Design Problem by a Deconstructive Heuristic Algorithm.</div>
+              <div class="pub__meta"><em>International Conference on Optimization and Learning</em> — (2025)</div>
+              <a class="pub__link" href="https://link.springer.com/chapter/10.1007/978-3-032-13589-6_23" target="_blank" rel="noopener">Enlace →</a>
+            </div>
+
+            <div class="pub">
+              <div class="pub__title">An enhanced Benders decomposition method and a matheuristic algorithm for solving the stochastic capacitated facility location problem with shortages.</div>
+              <div class="pub__meta"><em>Expert Systems with Applications</em> — (2024)</div>
+              <a class="pub__link" href="https://www.sciencedirect.com/science/article/pii/S0957417424016695" target="_blank" rel="noopener">Enlace →</a>
+            </div>
+
+            <div class="pub">
+              <div class="pub__title">Improving aggregate production planning considering maximum inventory area and service level with demand uncertainty.</div>
+              <div class="pub__meta"><em>Journal of Industrial and Production Engineering</em> — (2024)</div>
+              <a class="pub__link" href="https://www.tandfonline.com/doi/abs/10.1080/21681015.2024.2332632" target="_blank" rel="noopener">Enlace →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Noticias</h2>
+          <p class="muted">Reconocimientos y menciones.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <h3>Mejor tesis OR México (Maestría)</h3>
+            <p class="muted">Conecta Tec</p>
+            <a class="card__link" href="https://conecta.tec.mx/es/noticias/hidalgo/institucion/logro-nacional-profesor-del-tec-hidalgo-gana-premio-la-mejor-tesis" target="_blank" rel="noopener">Leer →</a>
+          </div>
+
+          <div class="card">
+            <h3>LINDO reconoce el premio (Lic.)</h3>
+            <p class="muted">Software de optimización</p>
+            <a class="card__link" href="https://www.lindo.com/" target="_blank" rel="noopener">Visitar →</a>
+          </div>
+
+          <div class="card">
+            <h3>Mejor tesis OR México (Lic.)</h3>
+            <p class="muted">UAEH</p>
+            <a class="card__link" href="https://www.uaeh.edu.mx/historias_exito/semblanza.php?id=132" target="_blank" rel="noopener">Leer →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RANKING -->
+    <section id="ranking" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>🌍 Ranking de coautores/colaboradores</h2>
+          <p class="muted">Con amor (y un poquito de caos controlado).</p>
+        </div>
+
+        <div class="card">
+          <p>
+            Siempre he considerado un privilegio trabajar con personas; en otras ocasiones, no tanto...
+            aquí está el ranking con mis coautores favoritos. Si te encuentras aquí, eres alguien con quien
+            definitivamente me gustaría colaborar en muchos proyectos.
+          </p>
+
+          <ul class="list">
+            <li>José-Fernando Camacho-Vallejo — Tecnológico de Monterrey</li>
+            <li>Justo Puerto — Universidad de Sevilla</li>
+            <li>Elena Fernández — Universidad de Cádiz</li>
+            <li>Eva Selene Hernández-Gress — Tecnológico de Monterrey</li>
+            <li>Diego Ruiz-Hernández — Sheffield University Management School</li>
+            <li>Eduardo Salazar-Treviño — AMPL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Contacto</h2>
+          <p class="muted">Investigación / consultoría / colaboración.</p>
+        </div>
+
+        <div class="card">
+          <div class="contact">
+            <a class="btn btn--primary" href="mailto:emmanuel.gr@tec.mx">Enviar correo</a>
+            <a class="btn btn--ghost" href="https://github.com/JeGr9797" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/jos%C3%A9-emmanuel-g%C3%B3mez-rocha-6b83551ab/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <p>© 2026 José Emmanuel Gómez-Rocha</p>
+        <p class="muted">Hecho con HTML/CSS y ganas de factibilidad.</p>
+      </div>
     </footer>
+  </main>
 
+  <script>
+    // scroll suave para anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", (e) => {
+        const id = a.getAttribute("href");
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: "smooth" });
+        history.pushState(null, "", id);
+      });
+    });
+  </script>
 </body>
 </html>
