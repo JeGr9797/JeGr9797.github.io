@@ -1,96 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - José Emmanuel Gómez-Rocha</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            text-align: center;
-            padding: 10px;
-            background: #444;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-size: 18px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-        }
-        section {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        li a {
-            text-decoration: none;
-            color: #0077cc;
-            font-weight: bold;
-        }
-        li a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog | José Emmanuel Gómez-Rocha</title>
+  <meta name="description" content="Blog posts by José Emmanuel Gómez-Rocha." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- your modern site CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <header>
-        <h1>On my thoughts about...</h1>
-        <nav>
-            <a href="index.html">Home</a>
-        </nav>
-    </header>
-    
-    <div class="container">
-        <section>
-            <h2>📖 Latest Posts</h2>
-            <ul>
-                <li><a href="Blog/post3.html">The best day of my life...</a></li>
-                <li><a href="Blog/post5.html">The duck adventures in Spain...</a></li>
-            </ul>
-        </section>
+  <!-- TOP BAR (same as homepage) -->
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="index.html#top">JEGR</a>
+
+      <nav class="nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#news">News</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav__pill" href="blog.html">Blog</a>
+        <a class="nav__pill" href="club.html">The Club</a>
+      </nav>
     </div>
-    
-    <footer>
-        <p>© 2024 José Emmanuel Gómez-Rocha | Blog</p>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" style="padding-bottom: 10px;">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="kicker">Notes, thoughts, and small stories</p>
+          <h1>Blog</h1>
+          <p class="lead">
+            Here I write personal things, they are in Spanish. You will only find this relevant if you are a very close acquaintance or are interested in learning more about me personally; otherwise, you will find this irrelevant.
+          </p>
+
+          <div class="cta">
+            <a class="btn btn--primary" href="#latest">Latest posts</a>
+            <a class="btn btn--ghost" href="index.html#top">Back to home</a>
+          </div>
+
+
+    <!-- POSTS -->
+    <section id="latest" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>📖 Latest posts</h2>
+          <p class="muted">Short list for now. I’ll keep adding more.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>More than just writing papers...</h3>
+            <p class="muted">Personal · Academia</p>
+            <p>
+              A short reflection on the human side of research and why “output” isn’t the only thing that matters.
+            </p>
+            <a class="card__link" href="Blog/post1.html">Read →</a>
+          </article>
+
+          <article class="card">
+            <h3>The best day of my life...</h3>
+            <p class="muted">Personal</p>
+            <p>
+              A simple post, straight to the point.
+            </p>
+            <a class="card__link" href="Blog/post3.html">Read →</a>
+          </article>
+
+          <article class="card">
+            <h3>The duck adventures in Spain...</h3>
+            <p class="muted">Travel · Stories</p>
+            <p>
+              Chronicles with humor and controlled chaos.
+            </p>
+            <a class="card__link" href="Blog/post5.html">Read →</a>
+          </article>
+        </div>
+
+        <div style="height:14px;"></div>
+
+        <div class="card">
+          <p class="muted" style="margin:0;">
+            Tip: each post is an HTML file inside <code>Blog/</code>. Add a new file and then add a new card here.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <p>© 2026 José Emmanuel Gómez-Rocha</p>
+        <p class="muted"><a href="index.html#top">Home</a> · <a href="#top">Back to top</a></p>
+      </div>
     </footer>
+  </main>
+
+  <script>
+    // smooth scrolling for #anchors (same behavior as your home)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", (e) => {
+        const id = a.getAttribute("href");
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: "smooth" });
+        history.pushState(null, "", id);
+      });
+    });
+  </script>
 </body>
 </html>
