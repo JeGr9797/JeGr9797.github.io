@@ -1,0 +1,695 @@
+{
+  "nodes": [
+    {
+      "id": "hector",
+      "name": "Héctor G. de Alba",
+      "papers": [
+        0,
+        4
+      ],
+      "orcid": "https://orcid.org/0009-0009-4357-9642",
+      "affiliation": null,
+      "topic": "planning"
+    },
+    {
+      "id": "li",
+      "name": "Haitao Li",
+      "papers": [
+        0
+      ],
+      "orcid": "https://orcid.org/0000-0001-7609-2819",
+      "affiliation": null,
+      "topic": "planning"
+    },
+    {
+      "id": "andres",
+      "name": "Andrés Téllez-Crespo",
+      "papers": [
+        0,
+        4
+      ],
+      "orcid": "https://orcid.org/0009-0004-7680-6585",
+      "affiliation": null,
+      "topic": "planning"
+    },
+    {
+      "id": "cipriano",
+      "name": "Cipriano Arturo Santos-Borbolla",
+      "papers": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "orcid": "https://orcid.org/0009-0009-9500-0954",
+      "affiliation": null,
+      "topic": "planning"
+    },
+    {
+      "id": "emmanuel",
+      "name": "José Emmanuel Gómez-Rocha",
+      "papers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "orcid": "https://orcid.org/0000-0002-0295-3003",
+      "affiliation": null,
+      "topic": "planning"
+    },
+    {
+      "id": "vargas",
+      "name": "Marcos C. Vargas",
+      "papers": [
+        0
+      ],
+      "orcid": null,
+      "affiliation": null,
+      "topic": "planning"
+    },
+    {
+      "id": "regueira",
+      "name": "Victor A. Regueira",
+      "papers": [
+        0
+      ],
+      "orcid": null,
+      "affiliation": null,
+      "topic": "planning"
+    },
+    {
+      "id": "ramshaw",
+      "name": "Lyle Ramshaw",
+      "papers": [
+        0
+      ],
+      "orcid": "https://orcid.org/0000-0002-9113-1473",
+      "affiliation": null,
+      "topic": "planning"
+    },
+    {
+      "id": "ramireznafarrate",
+      "name": "Adrian Ramirez-Nafarrate",
+      "papers": [
+        0
+      ],
+      "orcid": "https://orcid.org/0000-0003-3240-7967",
+      "affiliation": null,
+      "topic": "planning"
+    },
+    {
+      "id": "nucamendiguillen",
+      "name": "Samuel Nucamendi-Guillén",
+      "papers": [
+        1
+      ],
+      "orcid": null,
+      "affiliation": "Facultad de Ingeniería Universidad Panamericana  Álvaro del Portillo 49 Zapopan Jalisco 45010 México",
+      "topic": "routing"
+    },
+    {
+      "id": "camacho",
+      "name": "José-Fernando Camacho-Vallejo",
+      "papers": [
+        1,
+        2,
+        5
+      ],
+      "orcid": "https://orcid.org/0000-0001-6519-7690",
+      "affiliation": "Tecnologico de Monterrey Escuela de Ingenieria y Ciencias  Ave. Eugenio Garza Sada 2501 Sur Monterrey Nuevo León 64849 México",
+      "topic": "routing"
+    },
+    {
+      "id": "pardo",
+      "name": "Javier A. Moraga Pardo",
+      "papers": [
+        1
+      ],
+      "orcid": null,
+      "affiliation": "SITRANS Chile  Av. Jorge Alessandri Rodríguez 10698‐10702 San Bernardo Santiago 8150513 Chile",
+      "topic": "routing"
+    },
+    {
+      "id": "gonzalezramirez",
+      "name": "Rosa G. González-Ramírez",
+      "papers": [
+        1
+      ],
+      "orcid": "https://orcid.org/0000-0001-8029-5432",
+      "affiliation": "Facultad de Ingeniería y Ciencias Aplicadas Universidad de los Andes, Chile  Monseñor Álvaro del Portillo 12455 Las Condes, Santiago 8150513 Chile",
+      "topic": "routing"
+    },
+    {
+      "id": "eva",
+      "name": "Eva Selene Hernández-Gress",
+      "papers": [
+        3,
+        5
+      ],
+      "orcid": "https://orcid.org/0000-0001-8720-5997",
+      "affiliation": "Engineering and School Sciences, Tecnologico de Monterrey, Monterrey, Mexico",
+      "topic": "planning"
+    },
+    {
+      "id": "orozco",
+      "name": "Juán Antonio Orozco",
+      "papers": [
+        4
+      ],
+      "orcid": null,
+      "affiliation": null,
+      "topic": "learning"
+    },
+    {
+      "id": "baezayates",
+      "name": "Ricardo Baeza-Yates",
+      "papers": [
+        4
+      ],
+      "orcid": "https://orcid.org/0000-0003-3208-9778",
+      "affiliation": null,
+      "topic": "learning"
+    }
+  ],
+  "edges": [
+    {
+      "a": "hector",
+      "b": "li",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "hector",
+      "b": "andres",
+      "papers": [
+        0,
+        4
+      ]
+    },
+    {
+      "a": "hector",
+      "b": "cipriano",
+      "papers": [
+        0,
+        4
+      ]
+    },
+    {
+      "a": "hector",
+      "b": "emmanuel",
+      "papers": [
+        0,
+        4
+      ]
+    },
+    {
+      "a": "hector",
+      "b": "vargas",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "hector",
+      "b": "regueira",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "hector",
+      "b": "ramshaw",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "hector",
+      "b": "ramireznafarrate",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "li",
+      "b": "andres",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "li",
+      "b": "cipriano",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "li",
+      "b": "emmanuel",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "li",
+      "b": "vargas",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "li",
+      "b": "regueira",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "li",
+      "b": "ramshaw",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "li",
+      "b": "ramireznafarrate",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "andres",
+      "b": "cipriano",
+      "papers": [
+        0,
+        4
+      ]
+    },
+    {
+      "a": "andres",
+      "b": "emmanuel",
+      "papers": [
+        0,
+        4
+      ]
+    },
+    {
+      "a": "andres",
+      "b": "vargas",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "andres",
+      "b": "regueira",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "andres",
+      "b": "ramshaw",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "andres",
+      "b": "ramireznafarrate",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "cipriano",
+      "b": "emmanuel",
+      "papers": [
+        0,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "a": "cipriano",
+      "b": "vargas",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "cipriano",
+      "b": "regueira",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "cipriano",
+      "b": "ramshaw",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "cipriano",
+      "b": "ramireznafarrate",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "emmanuel",
+      "b": "vargas",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "emmanuel",
+      "b": "regueira",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "emmanuel",
+      "b": "ramshaw",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "emmanuel",
+      "b": "ramireznafarrate",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "vargas",
+      "b": "regueira",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "vargas",
+      "b": "ramshaw",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "vargas",
+      "b": "ramireznafarrate",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "regueira",
+      "b": "ramshaw",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "regueira",
+      "b": "ramireznafarrate",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "ramshaw",
+      "b": "ramireznafarrate",
+      "papers": [
+        0
+      ]
+    },
+    {
+      "a": "nucamendiguillen",
+      "b": "emmanuel",
+      "papers": [
+        1
+      ]
+    },
+    {
+      "a": "nucamendiguillen",
+      "b": "camacho",
+      "papers": [
+        1
+      ]
+    },
+    {
+      "a": "nucamendiguillen",
+      "b": "pardo",
+      "papers": [
+        1
+      ]
+    },
+    {
+      "a": "nucamendiguillen",
+      "b": "gonzalezramirez",
+      "papers": [
+        1
+      ]
+    },
+    {
+      "a": "emmanuel",
+      "b": "camacho",
+      "papers": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "a": "emmanuel",
+      "b": "pardo",
+      "papers": [
+        1
+      ]
+    },
+    {
+      "a": "emmanuel",
+      "b": "gonzalezramirez",
+      "papers": [
+        1
+      ]
+    },
+    {
+      "a": "camacho",
+      "b": "pardo",
+      "papers": [
+        1
+      ]
+    },
+    {
+      "a": "camacho",
+      "b": "gonzalezramirez",
+      "papers": [
+        1
+      ]
+    },
+    {
+      "a": "pardo",
+      "b": "gonzalezramirez",
+      "papers": [
+        1
+      ]
+    },
+    {
+      "a": "emmanuel",
+      "b": "eva",
+      "papers": [
+        3,
+        5
+      ]
+    },
+    {
+      "a": "eva",
+      "b": "cipriano",
+      "papers": [
+        3,
+        5
+      ]
+    },
+    {
+      "a": "hector",
+      "b": "orozco",
+      "papers": [
+        4
+      ]
+    },
+    {
+      "a": "hector",
+      "b": "baezayates",
+      "papers": [
+        4
+      ]
+    },
+    {
+      "a": "andres",
+      "b": "orozco",
+      "papers": [
+        4
+      ]
+    },
+    {
+      "a": "andres",
+      "b": "baezayates",
+      "papers": [
+        4
+      ]
+    },
+    {
+      "a": "emmanuel",
+      "b": "orozco",
+      "papers": [
+        4
+      ]
+    },
+    {
+      "a": "emmanuel",
+      "b": "baezayates",
+      "papers": [
+        4
+      ]
+    },
+    {
+      "a": "cipriano",
+      "b": "orozco",
+      "papers": [
+        4
+      ]
+    },
+    {
+      "a": "cipriano",
+      "b": "baezayates",
+      "papers": [
+        4
+      ]
+    },
+    {
+      "a": "orozco",
+      "b": "baezayates",
+      "papers": [
+        4
+      ]
+    },
+    {
+      "a": "eva",
+      "b": "camacho",
+      "papers": [
+        5
+      ]
+    },
+    {
+      "a": "camacho",
+      "b": "cipriano",
+      "papers": [
+        5
+      ]
+    }
+  ],
+  "papers": [
+    {
+      "id": 0,
+      "title": "Using optimization and AI for large-scale stochastic resource planning",
+      "doi": "10.1007/s10479-026-07335-2",
+      "year": 2026,
+      "journal": "Annals of Operations Research",
+      "authors": [
+        "hector",
+        "li",
+        "andres",
+        "cipriano",
+        "emmanuel",
+        "vargas",
+        "regueira",
+        "ramshaw",
+        "ramireznafarrate"
+      ],
+      "topic": "planning"
+    },
+    {
+      "id": 1,
+      "title": "The latency location routing problem with split deliveries: mathematical formulation and metaheuristic algorithm",
+      "doi": "10.1111/itor.13606",
+      "year": 2024,
+      "journal": "International Transactions in Operational Research",
+      "authors": [
+        "nucamendiguillen",
+        "emmanuel",
+        "camacho",
+        "pardo",
+        "gonzalezramirez"
+      ],
+      "topic": "routing"
+    },
+    {
+      "id": 2,
+      "title": "Solving the Semivectorial Bilevel Hazmat Network Design Problem by a Deconstructive Heuristic Algorithm",
+      "doi": "10.1007/978-3-032-13589-6_23",
+      "year": 2026,
+      "journal": "Optimization and Learning",
+      "authors": [
+        "camacho",
+        "emmanuel"
+      ],
+      "topic": "routing"
+    },
+    {
+      "id": 3,
+      "title": "Improving aggregate production planning considering maximum inventory area and service level with demand uncertainty: a nearshoring context in Mexican companies",
+      "doi": "10.1080/21681015.2024.2332632",
+      "year": 2024,
+      "journal": "Journal of Industrial and Production Engineering",
+      "authors": [
+        "emmanuel",
+        "eva",
+        "cipriano"
+      ],
+      "topic": "planning"
+    },
+    {
+      "id": 4,
+      "title": "Towards a trade-off of interpretability, accuracy and scalability: Enhanced formulations in linear classification models",
+      "doi": "10.1016/j.cor.2026.107411",
+      "year": 2026,
+      "journal": "Computers & Operations Research",
+      "authors": [
+        "hector",
+        "andres",
+        "emmanuel",
+        "cipriano",
+        "orozco",
+        "baezayates"
+      ],
+      "topic": "learning"
+    },
+    {
+      "id": 5,
+      "title": "An enhanced benders decomposition method and a matheuristic algorithm for solving the stochastic capacitated facility location problem with shortages",
+      "doi": "10.1016/j.eswa.2024.124802",
+      "year": 2024,
+      "journal": "Expert Systems with Applications",
+      "authors": [
+        "emmanuel",
+        "eva",
+        "camacho",
+        "cipriano"
+      ],
+      "topic": "planning"
+    }
+  ]
+}
