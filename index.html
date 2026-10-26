@@ -268,6 +268,11 @@
           <p class="muted">Research and multidisciplinary work across institutions.</p>
         </div>
 
+        <div class="collaboration-network" style="margin-bottom:24px">
+          <iframe id="collaboration-network-frame" src="collaboration-network/?embed=1" title="Interactive coauthorship network" loading="lazy" style="display:block;width:100%;height:940px;border:0;border-radius:14px" allow="fullscreen"></iframe>
+          <p><a class="card__link" href="collaboration-network/">Open collaboration network in full screen →</a></p>
+        </div>
+
         <div class="grid grid--2">
           <div class="card">
             <h3>Research collaborators</h3>
@@ -312,6 +317,12 @@
   </main>
 
   <script>
+    window.addEventListener("message", (event) => {
+      const frame = document.getElementById("collaboration-network-frame");
+      if (event.origin !== location.origin || event.source !== frame?.contentWindow || event.data?.type !== "collaboration-network-height") return;
+      const height = Number(event.data.height);
+      if (Number.isFinite(height) && height > 200 && height < 10000) frame.style.height = Math.ceil(height) + "px";
+    });
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener("click", (e) => {
         const id = a.getAttribute("href");
@@ -326,4 +337,5 @@
 
 </body>
 </html>
+
 
