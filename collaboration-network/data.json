@@ -54,7 +54,8 @@
         2,
         3,
         4,
-        5
+        5,
+        6
       ],
       "orcid": "https://orcid.org/0000-0002-0295-3003",
       "affiliation": null,
@@ -116,7 +117,8 @@
       "papers": [
         1,
         2,
-        5
+        5,
+        6
       ],
       "orcid": "https://orcid.org/0000-0001-6519-7690",
       "affiliation": "Tecnologico de Monterrey Escuela de Ingenieria y Ciencias  Ave. Eugenio Garza Sada 2501 Sur Monterrey Nuevo León 64849 México",
@@ -172,6 +174,16 @@
       "orcid": "https://orcid.org/0000-0003-3208-9778",
       "affiliation": null,
       "topic": "learning"
+    },
+    {
+      "id": "elena",
+      "name": "Elena Fernández",
+      "papers": [
+        6
+      ],
+      "orcid": null,
+      "affiliation": "Universidad de Cádiz",
+      "topic": "routing"
     }
   ],
   "edges": [
@@ -469,7 +481,8 @@
       "papers": [
         1,
         2,
-        5
+        5,
+        6
       ]
     },
     {
@@ -599,6 +612,20 @@
       "papers": [
         5
       ]
+    },
+    {
+      "a": "emmanuel",
+      "b": "elena",
+      "papers": [
+        6
+      ]
+    },
+    {
+      "a": "camacho",
+      "b": "elena",
+      "papers": [
+        6
+      ]
     }
   ],
   "papers": [
@@ -690,6 +717,20 @@
         "cipriano"
       ],
       "topic": "planning"
+    },
+    {
+      "id": 6,
+      "title": "Handling Customer Preferences in Last-Mile Location-Routing: A Bilevel Optimization Approach",
+      "doi": "10.48550/arXiv.2611.05230",
+      "year": 2026,
+      "journal": "arXiv preprint · LRP-DP",
+      "authors": [
+        "emmanuel",
+        "camacho",
+        "elena"
+      ],
+      "topic": "routing"
     }
   ]
 }
+
