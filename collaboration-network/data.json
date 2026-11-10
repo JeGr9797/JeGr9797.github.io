@@ -55,7 +55,8 @@
         3,
         4,
         5,
-        6
+        6,
+        7
       ],
       "orcid": "https://orcid.org/0000-0002-0295-3003",
       "affiliation": null,
@@ -183,6 +184,16 @@
       ],
       "orcid": null,
       "affiliation": "Universidad de Cádiz",
+      "topic": "routing"
+    },
+    {
+      "id": "eduardo",
+      "name": "Eduardo Salazar-Treviño",
+      "papers": [
+        7
+      ],
+      "orcid": null,
+      "affiliation": "AMPL Optimization",
       "topic": "routing"
     }
   ],
@@ -626,6 +637,13 @@
       "papers": [
         6
       ]
+    },
+    {
+      "a": "emmanuel",
+      "b": "eduardo",
+      "papers": [
+        7
+      ]
     }
   ],
   "papers": [
@@ -728,6 +746,18 @@
         "emmanuel",
         "camacho",
         "elena"
+      ],
+      "topic": "routing"
+    },
+    {
+      "id": 7,
+      "title": "A Flexible Iterated Local Search for the Latency Location Routing Problem with Opening Costs and Split Deliveries",
+      "doi": "10.2139/ssrn.7465386",
+      "year": 2026,
+      "journal": "SSRN preprint",
+      "authors": [
+        "emmanuel",
+        "eduardo"
       ],
       "topic": "routing"
     }
